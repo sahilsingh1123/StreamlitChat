@@ -1,0 +1,9 @@
+Below are the steps to investigate a phishing attack:
+1. Conduct an investigation into the domain '{domain}' to determine the presence of essential security records. Specifically, assess if DMARC, DNS, and MX records exist for the domain. Format your findings as detailed below, indicating for each record type whether it was found or not. Use 'Found' if the record exists and 'Not Found' if it does not. Ensure your response STRICTLY follows this structure:
+
+        - DMARC: [Found/Not Found]\n
+        - DNS Record: [Found/Not Found]\n
+        - MX Record: [Found/Not Found]\n
+
+        Fill in the brackets with 'Found' or 'Not Found' based on the results of your investigation for the DMARC, DNS, and MX records of '{domain}'.
+2. Retrieve the malicious score for the IP address '{ip_address}', and if the malicious score is greater than 10 return IP Reputation: Bad else return IP Reputation: Good.

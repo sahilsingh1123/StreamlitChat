@@ -1,0 +1,49 @@
+[
+    {"Ticket ID": "301", "rule_name": "Threat Activity Detected", "threat_category": "threatlist", "threat_collection": "ip_intel", "threat_collection_key": "sans|77.90.185.0/24", "threat_description": "SANS blocklist", "threat_group": "sans", "threat_key": "sans", "threat_match_field": "src", "threat_match_value": "77.90.185.150", "threat_source_digest": "8add5f3f33ce55938cfd6c989bf06636387eb651", "threat_source_id": "sans", "threat_source_path": "/data/var/lib/splunk/modinputs/threatlist/sans", "threat_source_type": "csv", "st": "fortigate_traffic", "annotations.mitre_attack.mitre_tactic": "Command and Control", "annotations.mitre_attack.mitre_tactic_id": "TA0011", "annotations.mitre_attack.mitre_technique": "Application Layer Protocol\nCustom Command and Control Protocol", "annotations.mitre_attack.mitre_technique_id": "T1071\nT1094"},
+    {"Ticket ID": "303", "rule_name": "Threat Activity Detected", "threat_category": "threatlist", "threat_collection": "ip_intel", "threat_collection_key": "sans|185.233.19.0/24", "threat_description": "SANS blocklist", "threat_group": "sans", "threat_key": "sans", "threat_match_field": "src", "threat_match_value": "185.233.19.219", "threat_source_digest": "8add5f3f33ce55938cfd6c989bf06636387eb651", "threat_source_id": "sans", "threat_source_path": "/data/var/lib/splunk/modinputs/threatlist/sans", "threat_source_type": "csv", "st": "fortigate_traffic", "annotations.mitre_attack.mitre_tactic": "Command and Control", "annotations.mitre_attack.mitre_tactic_id": "TA0011", "annotations.mitre_attack.mitre_technique": "Application Layer Protocol\nCustom Command and Control Protocol", "annotations.mitre_attack.mitre_technique_id": "T1071\nT1094"},
+    {"Ticket ID": "801", "rule_name": "Threat Activity Detected", "threat_category": "threatlist", "threat_collection": "ip_intel", "threat_collection_key": "sans|162.216.149.0/24", "threat_description": "SANS blocklist", "threat_group": "sans", "threat_key": "sans", "threat_match_field": "src", "threat_match_value": "162.216.149.17", "threat_source_digest": "069b4cd46ef4493c536e7b292dfd0a05e2747a75", "threat_source_id": "sans", "threat_source_path": "/data/var/lib/splunk/modinputs/threatlist/sans", "threat_source_type": "csv", "st": "fortigate_traffic", "annotations.mitre_attack.mitre_tactic": "Command and Control", "annotations.mitre_attack.mitre_tactic_id": "TA0011", "annotations.mitre_attack.mitre_technique": "Application Layer Protocol\nCustom Command and Control Protocol", "annotations.mitre_attack.mitre_technique_id": "T1071\nT1094"},
+    {"Ticket ID": "804", "rule_name": "Threat Activity Detected", "threat_category": "threatlist", "threat_collection": "ip_intel", "threat_collection_key": "sans|77.90.185.0/24", "threat_description": "SANS blocklist", "threat_group": "sans", "threat_key": "sans", "threat_match_field": "src", "threat_match_value": "77.90.185.100", "threat_source_digest": "069b4cd46ef4493c536e7b292dfd0a05e2747a75", "threat_source_id": "sans", "threat_source_path": "/data/var/lib/splunk/modinputs/threatlist/sans", "threat_source_type": "csv", "st": "fortigate_traffic", "annotations.mitre_attack.mitre_tactic": "Command and Control", "annotations.mitre_attack.mitre_tactic_id": "TA0011", "annotations.mitre_attack.mitre_technique": "Application Layer Protocol\nCustom Command and Control Protocol", "annotations.mitre_attack.mitre_technique_id": "T1071\nT1094"},
+    {"Ticket ID": "1101", "rule_name": "Threat Activity Detected", "threat_category": "threatlist", "threat_collection": "ip_intel", "threat_collection_key": "sans|65.49.1.0/24", "threat_description": "SANS blocklist", "threat_group": "sans", "threat_key": "sans", "threat_match_field": "src", "threat_match_value": "65.49.1.88", "threat_source_digest": "5e52d8e43b9802c67cacd86743bd05fda5afdbe9", "threat_source_id": "sans", "threat_source_path": "/data/var/lib/splunk/modinputs/threatlist/sans", "threat_source_type": "csv", "st": "fortigate_traffic", "annotations.mitre_attack.mitre_tactic": "Command and Control", "annotations.mitre_attack.mitre_tactic_id": "TA0011", "annotations.mitre_attack.mitre_technique": "Application Layer Protocol\nCustom Command and Control Protocol", "annotations.mitre_attack.mitre_technique_id": "T1071\nT1094"},
+    {"Ticket ID": "1108", "rule_name": "Threat Activity Detected", "threat_category": "threatlist", "threat_collection": "ip_intel", "threat_collection_key": "sans|65.49.1.0/24", "threat_description": "SANS blocklist", "threat_group": "sans", "threat_key": "sans", "threat_match_field": "src", "threat_match_value": "65.49.1.81", "threat_source_digest": "5e52d8e43b9802c67cacd86743bd05fda5afdbe9", "threat_source_id": "sans", "threat_source_path": "/data/var/lib/splunk/modinputs/threatlist/sans", "threat_source_type": "csv", "st": "fortigate_traffic", "annotations.mitre_attack.mitre_tactic": "Command and Control", "annotations.mitre_attack.mitre_tactic_id": "TA0011", "annotations.mitre_attack.mitre_technique": "Application Layer Protocol\nCustom Command and Control Protocol", "annotations.mitre_attack.mitre_technique_id": "T1071\nT1094"},
+    {
+      "Ticket ID": "2034",
+      "ip_address": "164.165.23.43",
+      "from": "service@important-verification.com",
+      "to": "user@example.com",
+      "email_header": "Important Account Verification",
+      "email_body": "Dear user, We have noticed unusual activity on your account. Click the link below to verify your account details."
+    },
+    {
+      "Ticket ID": "2035",
+      "ip_address": "192.165.23.43",
+      "from": "noreply@legitimate-store.com",
+      "to": "user@example.com",
+      "email_header": "Your Recent Purchase Confirmation",
+      "email_body": "Thank you for your recent purchase! If you did not make this purchase, please contact us immediately."
+    },
+    {
+      "Ticket ID": "2036",
+      "ip_address": "168.170.20.20",
+      "from": "security.alerts@urgent-update.com",
+      "to": "user@example.com",
+      "email_header": "Urgent: Security Update Required",
+      "email_body": "Your account security is at risk. Click here to update your password and secure your account."
+    },
+    {
+      "Ticket ID": "2037",
+      "ip_address": "190.134.23.43",
+      "from": "billing@legitimate-store.com",
+      "to": "user@example.com",
+      "email_header": "Invoice for Your Recent Order",
+      "email_body": "Attached is the invoice for your recent order. Please review and let us know if everything is correct."
+    },
+    {
+      "Ticket ID": "2038",
+      "ip_address": "172.160.23.43",
+      "from": "account.support@urgent-action.com",
+      "to": "user@example.com",
+      "email_header": "Immediate Action Required - Account Suspension",
+      "email_body": "Your account is at risk of suspension. Click the link to verify your identity and prevent suspension."
+    }
+  ]
+  

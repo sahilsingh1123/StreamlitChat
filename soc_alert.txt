@@ -1,0 +1,89 @@
+
+
+
+This runbook provides the steps to mitigate the Splunk notable in the incident review dashboard in Splunk ES that is threat activity detected.
+Prerequisites:  You need to have a threat intel list with you to check the risk score and recent activity performed through malicious IPs.
+STEP 1: In the incident review dashboard in Splunk ES you will find the detection activity notable as below in the image. The notable comes from the threat intelligence data model where the threat intelligence collects the matched threat value and displays the incident. The below image can give the information of the fields like :
+source IP
+Destination IP
+Threat score etc.
+For eg here the source IP is 146.88.241.105 and the destination IP is ISP.
+
+Step 2: After checking the source and destination IP determine whether the network flow is the inbound flow or outbound flow of the traffic.
+If the source IP is Private it the its outbound communication and if the source IP is public it an inbound communication.
+On the same page above in the upper pannel go to Security Domain → Network → Traffic Search
+Here we will take the detailed logs of the communication
+Firstly take the source IP copy it to the source and then select the action equal to allowed.
+We want to see only the allowed communication which is accepted in the logs. Search for the 90-day period so that you can get all relevant details thoroughly.
+As we see in the logs check action = accept.
+this is a green flag to check for the reputation.
+The destination port will give information about where the traffic is destined. The critical ports are : 
+15 Netstat
+20/21 FTP
+22 SSH
+23 Telnet
+25 SMTP
+50/51 IPSec
+53 DNS
+67/68 BOOTP
+69 TFTP
+79/49 TACACS+
+80 HTTP
+88 Kerberos
+110 POP3
+111 Port Map
+119 NNTP
+123 NTP
+137-139 NetBIOS
+143 IMAP
+161 SNMP
+389 LDAP
+443 SSL
+445 SMB
+500 IPSec/ISAKMP
+520 RIP
+546/547 DHCP
+636 SLDAP
+1512 WINS
+1701 L2TP
+1720 323
+1723 PPTP
+1812/13 RADIUS
+3389 RDP
+5004/5005 RTP
+5060/5061 SIP
+In below eg we are getting accepted inbound communication on port 500.
+
+Step 3: Now check the Reputation of the various threat intel (reference link below). The risk score and recent activities can give clarity on blocking the IP.
+Check on the Virustotal
+
+check on abuseipdb for recent activities. The recent activities will be shown below stating if they reported for port scan , hacking , spam/fraud, phishing etc.
+
+Step 4:  As we identified the threat ip it's time to block and raise an IS ticket for blocking.
+Before raising the ticket check whether the IP is already being raised in the ticket for blocking if yes then discontinue else proceed to make the ticket.
+Now since the IP above has not been raised will raise the ticket for blocking.
+Now we will export the logs of communications that is the raw logs 
+download from the down arrow as shown below in the image in CSV format and give the name as malicious_communication-date 
+
+Step 5: raising block ticket in IS and assign to Nilay Modi.
+The format of the ticket should be as follow : in the description of the ticket write about the flow of communication inbound or outbound. stating the commication details with action port number and count
+The format of the verifying threat intel should be  as below:
+The following IPs are reputed malicious on the following threat intel.
+Reputation Table:
+IP- 146.88.241.105
+
+||Website||Reputation||
+||abuseipdb | screen shot of the malicious IP|
+||mxtoolbox | screen shot of the malicious IP|
+||metadefender |screen shot of the malicious IP |
+Note: you can use other threatintel website for verification and not the ones above shown in example.
+We can block the IP.
+Then attach the raw log communication file as evident.
+Reference Ticket -  IS-39359 - Authenticate to see issue details
+Reference of the Threat Intels
+Abuseipdb
+Virustotal
+Metadefender
+cisco talos
+mxtoolbox
+

@@ -1,0 +1,3 @@
+Below are the steps to investigate a threat detection attack:
+1. Retrieve the malicious score and firewall status for the IP address {ip_address}, formatted as follows: 'Malicious: [replace malicious score here], Current Firewall Status: [Status].' Replace [Score] and [Status] with the actual values.
+2. Retrieve the threat confidence level and organization name for the IP address {ip_address} from AbuseDB? Please format your response as follows: 'Threat Confidence: [Level], ORG Name: [Name].' Replace [Level] with the actual threat confidence level and [Name] with the actual organization name.
